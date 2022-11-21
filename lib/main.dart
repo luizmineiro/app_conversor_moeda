@@ -1,24 +1,19 @@
-import 'package:cripto_app/pages/moedas_page.dart';
+import 'package:cripto_app/app/views/home_view.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
+main() {
+  runApp(const AppWidget());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class AppWidget extends StatelessWidget {
+  const AppWidget({super.key});
 
-  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.indigo,
-      ),
-      home: const MoedasPage(),
+      theme: ThemeData.dark(),
+      home: HomeView(),
     );
   }
 }
-
