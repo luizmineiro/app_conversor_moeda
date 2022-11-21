@@ -6,13 +6,35 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(100),
-            child: Image.asset('assets/currency_converter.png', width: 200,),
-          ),
-        ],
+      body: SizedBox(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        child: Column(
+          children: [
+            Image.asset(
+              'assets/currency_converter.png',
+            ),
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
+              child: Row(
+                children: [
+                  Expanded(
+                    child: DropdownButton(items: [], onChanged: (value) {}),
+                  ),
+                  const Expanded(
+                    child: TextField(
+                      decoration: InputDecoration(),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              child: const Text("CONVERTER"),
+            ),
+          ],
+        ),
       ),
     );
   }
