@@ -12,7 +12,9 @@ class HomeView extends StatelessWidget {
         child: Column(
           children: [
             Image.asset(
-              'assets/currency_converter.png',
+              'assets/logo.png',
+              width: 150,
+              height: 150,
             ),
             SizedBox(
               width: MediaQuery.of(context).size.width,
